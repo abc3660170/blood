@@ -7,8 +7,13 @@ Vue.use(VueRouter);
 
 // 1. 定义（路由）组件。
 // 可以从其他文件 import 进来
-const Foo = { template: require('../views/infomine.vue') };
-const Bar = { template: require('../views/infoyours.vue') };
+// const Foo = { template: require('../views/infomine.vue') };
+// const Bar = { template: require('../views/infoyours.vue') };
+const User = {template:"<div>" +
+                            "<h2>User {{$route.params.name }}</h2>" +
+                            "<router-view></router-view>" +
+                        "</div>"};
+const UserHome = {template:"<div>我是父级路由</div>"};
 
 // 2. 定义路由
 // 每个路由应该映射一个组件。 其中"component" 可以是
@@ -16,8 +21,16 @@ const Bar = { template: require('../views/infoyours.vue') };
 // 或者，只是一个组件配置对象。
 // 我们晚点再讨论嵌套路由。
 const routes = [
-    { path: '/foo',name:"我的资料", component: require('../views/infomine.vue') },
-    { path: '/bar',name:"你的资料", component: require('../views/infoyours.vue') }
+    { path: '/user/:name/',
+        component: User,
+        children:[
+            { path: '',name:"信息", component: UserHome },
+            { path: 'mine',name:"我的资料", component: require('../views/infomine.vue') },
+            { path: 'yours',name:"你的资料", component: require('../views/infoyours.vue') }
+        ]
+       // component: User
+    }
+
 ]
 
 // 3. 创建 router 实例，然后传 `routes` 配置
