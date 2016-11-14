@@ -4,11 +4,11 @@
 import 'normalize.css'
 import Vue from 'vue';
 import App from './App.vue'
-import route from './router'
-
+import VueRouter from 'vue-router';
+import router from './router/index'
 
 
 new Vue({ // eslint-disable-line
     render: h => h(App),
-    route
+    router
 }).$mount('#app');

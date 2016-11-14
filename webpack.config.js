@@ -6,10 +6,16 @@ var webpack = require('webpack');
 
 module.exports = {
     entry:'./src/main.js',
+    //entry:['webpack/hot/dev-server', path.resolve(__dirname, './src/main.js')],
     output:{
         path:path.resolve(__dirname,'./dist'),
         publicPath:'/dist/',
         filename:'build.js'
+    },
+    resolve: {
+        alias: {
+            'vue': 'vue/dist/vue.js'
+        }
     },
     resolveLoader: {
         root: path.join(__dirname, 'node_modules')
@@ -36,8 +42,15 @@ module.exports = {
         historyApiFallback: false,
         //publicPath:'/dist1/',
         noInfo: true
+        // hot:true,
+        // inline:true
     },
     devtool: '#eval-source-map'
+    //插件项
+    // plugins: [
+    //     new webpack.HotModuleReplacementPlugin(),
+    //     new webpack.NoErrorsPlugin()
+    // ]
 }
 
 if (process.env.NODE_ENV === 'production') {

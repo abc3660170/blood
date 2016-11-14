@@ -15,14 +15,26 @@
         height: 50px;
         background: mediumvioletred;
     }
+    .content{height: 300px;}
 </style>
 <template>
-    <div id="container">
+    <div id="app">
         <header>
-            这里将展示头部结构
+            这是为什么人生啊就是如此操蛋哈哈哈
         </header>
         <div id="main">
-            这里是我的本体111区域，哈哈哈哈~~~~~
+            <p>
+                <!-- 使用 router-link 组件来导航. -->
+                <!-- 通过传入 `to` 属性指定链接. -->
+                <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
+                <router-link to="/foo">Go to Foo</router-link>
+                <router-link to="/bar">Go to Bar</router-link>
+            </p>
+            <!-- 路由出口 -->
+            <!-- 路由匹配到的组件将渲染在这里 -->
+            <div class="content">
+                <router-view></router-view>
+            </div>
         </div>
         <footer>
             这里将展示本体结构
