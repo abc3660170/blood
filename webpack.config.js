@@ -18,7 +18,8 @@ module.exports = {
         }
     },
     resolveLoader: {
-        root: path.join(__dirname, 'node_modules')
+        //extensions: [".vue-loader.js",".file-loader.js", ".style-loader.js", ".loader.js", ".js"]
+       root: path.join(__dirname, 'node_modules')
     },
     module:{
         loaders:[
@@ -34,12 +35,23 @@ module.exports = {
             {
                 test: /\.css$/,
                 loader: 'style!css'
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file'
+            },
+            {
+                test: /\.(png|jpg|gif|svg)$/,
+                loader: 'file',
+                query: {
+                    name: '[name].[ext]?[hash]'
+                }
             }
 
         ]
     },
     devServer: {
-        historyApiFallback: false,
+        historyApiFallback: true,
         //publicPath:'/dist1/',
         noInfo: true
         // hot:true,

@@ -6,7 +6,7 @@
     <ul>
         <li>
             <label>姓名：</label>
-            王月铭
+            {{$route.params.name }}
         </li>
         <li>
             <label>性别：</label>
@@ -18,3 +18,7 @@
         </li>
     </ul>
 </template>
+<script>
+//    console.debug("============  下面是路由实例 ==========");
+//    console.log(this.$route);
+</script>

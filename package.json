@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --port 3000",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -26,10 +27,11 @@
     "vue": "^2.0.5",
     "vue-loader": "^9.8.1",
     "vue-router": "^2.0.1",
-    "webpack": "^1.13.3",
-    "webpack-dev-server": "^1.16.2"
+    "webpack": "^2.1.0-beta.22",
+    "webpack-dev-server": "^2.1.0-beta.0"
   },
   "dependencies": {
+    "element-ui": "^1.0.0-rc.9",
     "normalize.css": "^5.0.0"
   }
 }

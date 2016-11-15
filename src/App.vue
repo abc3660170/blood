@@ -9,7 +9,7 @@
     }
     #main{
         height: 400px;
-        background:gold;
+        background:#FFF;
     }
     footer{
         height: 50px;

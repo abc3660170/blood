@@ -24,7 +24,8 @@ const routes = [
     { path: '/user/:name/',
         component: User,
         children:[
-            { path: '',name:"信息", component: UserHome },
+            // 重定向 可以指向命名路由，也可以直接指向path
+            { path: '',redirect: {name:'你的资料'},name:"信息", component: UserHome },
             { path: 'mine',name:"我的资料", component: require('../views/infomine.vue') },
             { path: 'yours',name:"你的资料", component: require('../views/infoyours.vue') }
         ]
