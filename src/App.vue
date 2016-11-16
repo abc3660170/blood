@@ -29,6 +29,7 @@
                 <!-- <router-link> 默认会被渲染成一个 `<a>` 标签 -->
                 <router-link to="/user/foo/mine">Go to Foo</router-link>
                 <router-link to="/user/bar/yours">Go to Bar</router-link>
+                <router-link to="/user/bar/rate">rate</router-link>
             </p>
             <!-- 路由出口 -->
             <!-- 路由匹配到的组件将渲染在这里 -->
