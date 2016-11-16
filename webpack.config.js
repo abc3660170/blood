@@ -36,13 +36,14 @@ module.exports = {
                 test: /\.css$/,
                 loader: 'style!css'
             },
+            ,
             {
-                test: /\.(eot|svg|ttf|woff|woff2)$/,
-                loader: 'file'
+                test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+                loader: 'file-loader'
             },
             {
-                test: /\.(png|jpg|gif|svg)$/,
-                loader: 'file',
+                test: /\.(png|jpe?g|gif|svg)(\?\S*)?$/,
+                loader: 'file-loader',
                 query: {
                     name: '[name].[ext]?[hash]'
                 }
