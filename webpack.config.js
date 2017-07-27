@@ -17,7 +17,6 @@ module.exports = {
             'vue': 'vue/dist/vue.js'
         }
     },
-    disableHostCheck: true,
     resolveLoader: {
         //extensions: [".vue-loader.js",".file-loader.js", ".style-loader.js", ".loader.js", ".js"]
        root: path.join(__dirname, 'node_modules')
@@ -53,6 +52,7 @@ module.exports = {
         ]
     },
     devServer: {
+        disableHostCheck: true,
         historyApiFallback: true,
         //publicPath:'/dist1/',
         noInfo: true
