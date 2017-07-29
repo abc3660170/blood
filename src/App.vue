@@ -1,3 +1,4 @@
+
 <style>
     #container{
         height: 100%;
@@ -19,6 +20,7 @@
 </style>
 <template>
     <div id="app">
+        <div id="player1" style="width: 800px; height: 600px; margin: 50px auto"></div>
         <header>
             这是为什么人生啊就是如此操蛋哈哈哈
         </header>
@@ -44,5 +46,20 @@
 </template>
 
 <script>
+    import $ from 'jquery'
+    import DPlayer from 'dplayer/dist/DPlayer.min.js'
+    $(document).ready(function(){
+        var dp = new DPlayer({
+            element: document.getElementById('player1'),
+            video: {
+                url: 'dplayer.mp4',
+                pic: 'dplayer.png'
+            },
+            danmaku: {
+                id: 'testid',
+                api: 'https://api.prprpr.me/dplayer/'
+            }
+        });
+    })
 
 </script>
