@@ -52,12 +52,8 @@
         var dp = new DPlayer({
             element: document.getElementById('player1'),
             video: {
-                url: 'dplayer.mp4',
-                pic: 'dplayer.png'
-            },
-            danmaku: {
-                id: 'testid',
-                api: 'https://api.prprpr.me/dplayer/'
+                url: 'http://devtest.qiniudn.com/%E8%8B%A5%E8%83%BD%E7%BB%BD%E6%94%BE%E5%85%89%E8%8A%92.mp4',
+                pic: 'http://devtest.qiniudn.com/%E8%8B%A5%E8%83%BD%E7%BB%BD%E6%94%BE%E5%85%89%E8%8A%92.png'
             }
         });
     })
