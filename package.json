@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --host 0.0.0.0 --port 80 ",
+    "start": "webpack && pm2 start app.js --name chentao",
+    "restart": "webpack && pm2 restart chentao",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -31,8 +33,10 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "babel-register": "^6.24.1",
     "dplayer": "^1.5.0",
     "element-ui": "^1.0.1",
+    "express": "^4.15.3",
     "jquery": "^3.2.1",
     "normalize.css": "^5.0.0"
   }
