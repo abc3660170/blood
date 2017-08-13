@@ -7,7 +7,7 @@
         height: 50px;
         text-align:center;
         font-size: 22px;
-        line-height: 120px;
+        line-height: 22px;
     }
     #main{
         height: 400px;
@@ -22,21 +22,21 @@
 <template>
     <div id="app">
         <header> 陈涛的博客，施工中... </header>
-        <div id="player1" style="width: 800px; height: 600px; margin: 50px auto"></div>
+        <!--<div id="player1" style="width: 800px; height: 600px; margin: 50px auto"></div>-->
     </div>
 </template>
 
 <script>
     import $ from 'jquery'
     import DPlayer from 'dplayer/dist/DPlayer.min.js'
-    $(document).ready(function(){
-        var dp = new DPlayer({
-            element: document.getElementById('player1'),
-            video: {
-                url: './public/video/flash.mp4',
-                pic: 'http://devtest.qiniudn.com/%E8%8B%A5%E8%83%BD%E7%BB%BD%E6%94%BE%E5%85%89%E8%8A%92.png'
-            }
-        });
-    })
+//    $(document).ready(function(){
+//        var dp = new DPlayer({
+//            element: document.getElementById('player1'),
+//            video: {
+//                url: './public/video/flash.mp4',
+//                pic: 'http://devtest.qiniudn.com/%E8%8B%A5%E8%83%BD%E7%BB%BD%E6%94%BE%E5%85%89%E8%8A%92.png'
+//            }
+//        });
+//    })
 
 </script>
